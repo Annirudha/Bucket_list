@@ -1,0 +1,192 @@
+/* Ensure the video fills the screen */
+.back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+  z-index: -1; /* Send video to the background */
+}
+
+/* Add your existing CSS for styling login and bucket list */
+
+
+/* Center the Todo List box */
+.container {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for visibility */
+  text-align: center;
+  width: 300px; /* Adjust as needed */
+  backdrop-filter: blur(10px); /* Optional: Adds a frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.4); /* Optional: Light border for clarity */
+}
+
+/* Heading styling */
+.container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Input container styling */
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.todos-container li {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(1);
+  }
+}
+
+.add-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.add-button i {
+  font-size: 20px;
+}
+
+/* Filter buttons */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.filter, .delete-all {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filter:hover, .delete-all:hover {
+  background-color: #ddd;
+}
+.add-button, .filter, .delete-all {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.add-button:hover, .filter:hover, .delete-all:hover {
+  transform: scale(1.1);
+}
+
+
+/* Todo items container */
+.todos-container {
+  text-align: left;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Style for the added tasks (list items) */
+.todos-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todos-container li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Hover effect for the todo items */
+.todos-container li:hover {
+  background-color: #e0e0e0;
+}
+
+/* Button for deleting tasks */
+.todos-container button {
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #ff4d4d;
+}
+
+.todos-container button:hover {
+  color: #ff1a1a;
+}
+
+/* General body settings */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Footer Styling */
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark background for visibility */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3); /* Light border at the top */
+}
+.back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+body.dark-mode .back {
+  /* Optional: Additional styling for night mode */
+  filter: brightness(0.8); /* Slightly dim the video */
+}
+
+
+footer p {
+  margin: 0;
+}
